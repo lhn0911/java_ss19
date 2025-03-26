@@ -1,7 +1,6 @@
 package ss19.Bai3;
 
 import java.util.Scanner;
-import java.util.function.BiFunction;
 
 public class Bai3 {
     public static void main(String[] args) {
@@ -12,18 +11,11 @@ public class Bai3 {
         System.out.print("Nhập số b: ");
         int b = scanner.nextInt();
 
-        BiFunction<Integer, Integer, Integer> add = MathOperations::add;
-        BiFunction<Integer, Integer, Integer> sub = MathOperations::sub;
-        BiFunction<Integer, Integer, Integer> mul = MathOperations::mul;
-        BiFunction<Integer, Integer, Double> div = MathOperations::div;
-
-        System.out.println("Tổng: " + add.apply(a, b));
-        System.out.println("Hiệu: " + sub.apply(a, b));
-        System.out.println("Tích: " + mul.apply(a, b));
-        System.out.println("Thương: " + div.apply(a, b));
-
+        System.out.println("Tổng: " + MathOperations.add(a, b));
+        System.out.println("Hiệu: " + MathOperations.sub(a, b));
+        System.out.println("Tích: " + MathOperations.mul(a, b));
+        System.out.println("Thương: " + MathOperations.div(a, b));
 
         scanner.close();
-
     }
 }
